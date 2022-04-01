@@ -1,4 +1,31 @@
+.title {
+  font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  font-family: 'Rubik', sans-serif;
+  background-color: #0f1424;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+#parent {
+  padding: 20% 15%;
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=main.css.map */

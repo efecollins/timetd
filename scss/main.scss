@@ -1,6 +1,18 @@
 @import 'config';
 @import 'responsive';
 
-body {
-    background-color: red;
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
 }
+
+#parent {
+    padding: 20% 15%;
+    display: grid;
+}
+
+// @include media-mobile;

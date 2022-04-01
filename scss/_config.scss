@@ -1,0 +1,34 @@
+// Colors
+
+// #Primary
+$user-info_bg: hsl(246, 80%, 60%);
+$work-top_bg: hsl(15, 100%, 70%);
+$play-top_bg: hsl(195, 74%, 62%);
+$study-top_bg: hsl(348, 100%, 68%);
+$exercise-top_bg: hsl(145, 58%, 55%);
+$social-top_bg: hsl(264, 64%, 52%);
+$selfcare-top_bg: hsl(43, 84%, 65%);
+
+// #Neutral
+$body-bg: hsl(226, 43%, 10%);
+$section-bg: hsl(235, 46%, 20%);
+$section-bg_hover: hsl(235, 45%, 61%);
+$time-prev: hsl(236, 100%, 87%);
+
+// Reusable styles
+
+.title {
+    font-size: 18px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    //font-weight: 300, 400, 500;
+    background-color: $body-bg;
+}
