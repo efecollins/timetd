@@ -17,6 +17,13 @@ $time-prev: hsl(236, 100%, 87%);
 
 // Reusable styles
 
+.bg {
+    border-radius: 5%;
+    background-color: $section-bg;
+    padding: 10%;
+    color: #fff;
+}
+
 .title {
     font-size: 18px;
 }
@@ -29,6 +36,5 @@ $time-prev: hsl(236, 100%, 87%);
 
 body {
     font-family: 'Rubik', sans-serif;
-    //font-weight: 300, 400, 500;
     background-color: $body-bg;
 }

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
   <!--<link rel="manifest" href="js/data.json">-->
@@ -15,11 +18,11 @@
 
 <body>
   <div id="parent">
-    <main class="user">
+    <main class="user bg">
       <div class="user-info">
         <img class="user-img" src="images/image-jeremy.png" alt="Jeremy's Image">
         <p>Report for</p>
-        <h2 class="user-name">Jeremy Robson</h2>
+        <h1 class="user-name">Jeremy Robson</h1>
       </div>
 
       <!-- Use after pseudo-element class="user-time_category" -->
@@ -30,34 +33,35 @@
     </main>
 
     <div class="tracker">
-      <section class="tracker-work">
+      <section class="tracker-work bg">
+        <!-- <img src="images/icon-work.svg" alt="Work Image"> -->
         <h6 class="tracker-work_title title">
           Work
           <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
         </h6>
         <h1 class="tracker-work_time_now">
-          5hrs
+          <!-- 5hrs -->
           <!-- daily -->
 
           32hrs
           <!-- weekly -->
 
-          103hrs
+          <!-- 103hrs -->
           <!-- monthly -->
         </h1>
         <p class="tracker-work_time_previous">
-          Previous - 7hrs
+          <!-- Previous - 7hrs -->
           <!-- daily -->
 
           Previous - 36hrs
           <!-- weekly -->
 
-          Previous - 128hrs
+          <!-- Previous - 128hrs -->
           <!-- monthly -->
         </p>
       </section>
 
-      <section class="tracker-play">
+      <section class="tracker-play bg">
         <h6 class="tracker-play_title title">
           Play
           <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
@@ -84,7 +88,7 @@
         </p>
       </section>
 
-      <section class="tracker-study">
+      <section class="tracker-study bg">
         <h6 class="tracker-study_title title">
           Study
           <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
@@ -111,7 +115,7 @@
         </p>
       </section>
 
-      <section class="tracker-exercise">
+      <section class="tracker-exercise bg">
         <h6 class="tracker-exercise_title title">
           Exercise
           <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
@@ -138,7 +142,7 @@
         </p>
       </section>
 
-      <section class="tracker-social">
+      <section class="tracker-social bg">
         <h6 class="tracker-social_title title">
           Social
           <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
@@ -165,7 +169,7 @@
         </p>
       </section>
 
-      <section class="tracker-selfcare">
+      <section class="tracker-selfcare bg">
         <h6 class="tracker-selfcare_title title">
           Self Care
           <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
@@ -192,13 +196,11 @@
         </p>
       </section>
     </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://efecollins.github.io/new-pweb/dist">Efosa Collins Evbowe</a>.
+    </div>
   </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://efecollins.github.io/new-pweb/dist">Efosa Collins Evbowe</a>.
-  </div>
-
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/main.js"></script>
 </body>
