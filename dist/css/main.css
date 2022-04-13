@@ -6,7 +6,24 @@
 }
 
 .title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 25%;
+      grid-template-columns: 75% 25%;
   font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.now {
+  font-weight: 300;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.previous {
+  color: #bdc1ff;
+  font-size: 13px;
 }
 
 * {
@@ -22,9 +39,10 @@ body {
 }
 
 .attribution {
-  margin-top: 40px;
+  margin-top: 100px;
   font-size: 11px;
   text-align: center;
+  width: 85%;
 }
 
 .attribution a {
@@ -48,7 +66,7 @@ body {
 }
 
 #parent .user::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 160px;
   width: 100%;
@@ -56,7 +74,7 @@ body {
   left: 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  bottom: -150px;
+  bottom: -100px;
   z-index: -1;
 }
 
@@ -84,12 +102,58 @@ body {
   display: grid;
   -ms-grid-columns: 25% 25% 25%;
       grid-template-columns: 25% 25% 25%;
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
+  -ms-grid-rows: 60% 75%;
+      grid-template-rows: 60% 75%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+}
+
+#parent .tracker .bg {
+  position: relative;
+}
+
+#parent .tracker .bg::before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  left: 0.5px;
+  top: -40px;
+  z-index: -1;
+}
+
+#parent .tracker-work::before {
+  background: url("../images/icon-work.svg") no-repeat #ff8c66;
+}
+
+#parent .tracker-play::before {
+  background: url("../images/icon-play.svg") no-repeat #56c2e6;
+}
+
+#parent .tracker-study::before {
+  background: url("../images/icon-study.svg") no-repeat #ff5c7c;
+}
+
+#parent .tracker-exercise::before {
+  background: url("../images/icon-exercise.svg") no-repeat #4acf81;
+}
+
+#parent .tracker-social::before {
+  background: url("../images/icon-social.svg") no-repeat #7536d3;
+}
+
+#parent .tracker-selfcare::before {
+  background: url("../images/icon-self-care.svg") no-repeat #f1c65b;
+}
+
+#parent .tracker .title img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=main.css.map */
