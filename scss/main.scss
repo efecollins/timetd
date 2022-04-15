@@ -55,6 +55,20 @@
             color: #fff;
             font-weight: 300;
         }
+
+        &-time {
+            position: absolute;
+            bottom: -90px;
+            cursor: pointer;
+
+            .weekly {
+                margin: 10px auto;
+            }
+
+            .active {
+                color: $time-prev;
+            }
+        }
     }
 
     .tracker {
@@ -77,44 +91,47 @@
                 left: 0.5px;
                 top: -40px;
                 z-index: -1;
+                background-position: 90px;
+                background-repeat: no-repeat;
             }
         }
 
-        &-work {
-            &::before {
-                background: url("../images/icon-work.svg") no-repeat $work-top_bg;
-            }
-        }
+        // &-work {
+        //     &::before {
+        //         background: url("../images/icon-work.svg") $work-top_bg;
+        //     }
+        // }
 
-        &-play {
-            &::before {
-                background: url("../images/icon-play.svg") no-repeat $play-top_bg;
-            }
-        }
+        // &-play {
+        //     &::before {
+        //         background: url("../images/icon-play.svg") $play-top_bg;
+        //     }
+        // }
 
-        &-study {
-            &::before {
-                background: url("../images/icon-study.svg") no-repeat $study-top_bg;
-            }
-        }
+        // &-study {
+        //     &::before {
+        //         background: url("../images/icon-study.svg") $study-top_bg;
+        //     }
+        // }
 
-        &-exercise {
-            &::before {
-                background: url("../images/icon-exercise.svg") no-repeat $exercise-top_bg;
-            }
-        }
+        // &-exercise {
+        //     &::before {
+        //         background: url("../images/icon-exercise.svg") $exercise-top_bg;
+        //     }
+        // }
 
-        &-social {
-            &::before {
-                background: url("../images/icon-social.svg") no-repeat $social-top_bg;
-            }
-        }
+        // &-social {
+        //     &::before {
+        //         background: url("../images/icon-social.svg") $social-top_bg;
+        //         background-position-y: -4.5px !important;
+        //     }
+        // }
 
-        &-selfcare {
-            &::before {
-                background: url("../images/icon-self-care.svg") no-repeat $selfcare-top_bg;
-            }
-        }
+        // &-selfcare {
+        //     &::before {
+        //         background: url("../images/icon-self-care.svg") $selfcare-top_bg;
+        //     }
+        // }
 
         .title {
             img {
