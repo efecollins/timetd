@@ -5,6 +5,12 @@
   color: #fff;
 }
 
+.bg:hover {
+  background-color: #6f76c8;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
 .title {
   display: -ms-grid;
   display: grid;
@@ -26,6 +32,12 @@
   font-size: 13px;
 }
 
+.ellipsis:hover {
+  width: 70%;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -39,6 +51,7 @@ body {
 }
 
 .attribution {
+  color: #fff;
   margin-top: 100px;
   font-size: 11px;
   text-align: center;
@@ -108,7 +121,13 @@ body {
 }
 
 #parent .user-time .active {
-  color: #bdc1ff;
+  color: #fff;
+}
+
+#parent .user-time .daily:hover, #parent .user-time .weekly:hover, #parent .user-time .monthly:hover {
+  color: #fff;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 #parent .tracker {
@@ -147,5 +166,104 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .attribution {
+    margin-top: 110px;
+    line-height: 1.5;
+  }
+  #parent {
+    padding: 12% 15%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 75%;
+        grid-template-columns: 25% 75%;
+  }
+  #parent .user {
+    background-color: #5847eb;
+    padding: 10% 10% 25%;
+    width: 85%;
+    position: relative;
+    color: #6f76c8;
+  }
+  #parent .user::after {
+    content: "";
+    position: absolute;
+    height: 160px;
+    width: 100%;
+    background-color: #1c1f4a;
+    left: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: -100px;
+    z-index: -1;
+  }
+  #parent .user-img {
+    width: 30%;
+    border-color: white;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 25px;
+  }
+  #parent .user p {
+    color: #bdc1ff;
+    margin-bottom: 8px;
+  }
+  #parent .user-name {
+    color: #fff;
+    font-weight: 300;
+  }
+  #parent .user-time {
+    position: absolute;
+    bottom: -90px;
+    cursor: pointer;
+  }
+  #parent .user-time .weekly {
+    margin: 10px auto;
+  }
+  #parent .user-time .active {
+    color: #fff;
+  }
+  #parent .user-time .daily:hover, #parent .user-time .weekly:hover, #parent .user-time .monthly:hover {
+    color: #fff;
+    -webkit-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+  }
+  #parent .tracker {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25%;
+        grid-template-columns: 25% 25% 25%;
+    -ms-grid-rows: 60% 75%;
+        grid-template-rows: 60% 75%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  #parent .tracker .bg {
+    position: relative;
+  }
+  #parent .tracker .bg::before {
+    position: absolute;
+    content: "";
+    height: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    left: 0.5px;
+    top: -40px;
+    z-index: -1;
+    background-position: 90px;
+    background-repeat: no-repeat;
+  }
+  #parent .tracker .title img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */

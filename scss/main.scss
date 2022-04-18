@@ -2,6 +2,7 @@
 @import 'responsive';
 
 .attribution {
+    color: #fff;
     margin-top: 100px;
     font-size: 11px;
     text-align: center;
@@ -66,7 +67,14 @@
             }
 
             .active {
-                color: $time-prev;
+                color: #fff;
+            }
+
+            .daily,.weekly,.monthly {
+                &:hover {
+                    color: #fff;
+                    transition: color 0.2s ease-in;
+                }
             }
         }
     }
@@ -96,43 +104,6 @@
             }
         }
 
-        // &-work {
-        //     &::before {
-        //         background: url("../images/icon-work.svg") $work-top_bg;
-        //     }
-        // }
-
-        // &-play {
-        //     &::before {
-        //         background: url("../images/icon-play.svg") $play-top_bg;
-        //     }
-        // }
-
-        // &-study {
-        //     &::before {
-        //         background: url("../images/icon-study.svg") $study-top_bg;
-        //     }
-        // }
-
-        // &-exercise {
-        //     &::before {
-        //         background: url("../images/icon-exercise.svg") $exercise-top_bg;
-        //     }
-        // }
-
-        // &-social {
-        //     &::before {
-        //         background: url("../images/icon-social.svg") $social-top_bg;
-        //         background-position-y: -4.5px !important;
-        //     }
-        // }
-
-        // &-selfcare {
-        //     &::before {
-        //         background: url("../images/icon-self-care.svg") $selfcare-top_bg;
-        //     }
-        // }
-
         .title {
             img {
                 align-self: center;
@@ -141,4 +112,5 @@
     }
 }
 
+@include media-lg;
 // @include media-mobile;

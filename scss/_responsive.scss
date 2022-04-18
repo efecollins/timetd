@@ -1,5 +1,113 @@
 // @mixin media-mobile {
 //     @media screen and (max-width: 375px) {
-        
+
 //     }
 // }
+
+@mixin media-lg {
+    @media screen and (max-width: 1024px) {
+        .attribution {
+            margin-top: 110px;
+            line-height: 1.5;
+        }
+
+        #parent {
+            padding: 12% 15%;
+            display: grid;
+            grid-template-columns: 25% 75%;
+
+            .user {
+                background-color: $user-info_bg;
+                padding: 10% 10% 25%;
+                width: 85%;
+                position: relative;
+                color: $section-bg_hover;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 160px;
+                    width: 100%;
+                    background-color: #1c1f4a;
+                    left: 0;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    bottom: -100px;
+                    z-index: -1;
+                }
+
+                &-img {
+                    width: 30%;
+                    border-color: white;
+                    border-radius: 100%;
+                    border-style: solid;
+                    border-width: 2px;
+                    margin-bottom: 25px;
+                }
+
+                p {
+                    color: $time-prev;
+                    margin-bottom: 8px;
+                }
+
+                &-name {
+                    color: #fff;
+                    font-weight: 300;
+                }
+
+                &-time {
+                    position: absolute;
+                    bottom: -90px;
+                    cursor: pointer;
+
+                    .weekly {
+                        margin: 10px auto;
+                    }
+
+                    .active {
+                        color: #fff;
+                    }
+
+                    .daily,.weekly,.monthly {
+                        &:hover {
+                            color: #fff;
+                            transition: color 0.2s ease-in;
+                        }
+                    }
+                }
+            }
+
+            .tracker {
+                display: grid;
+                grid-template-columns: 25% 25% 25%;
+                grid-template-rows: 60% 75%;
+                justify-content: space-around;
+                align-items: end;
+
+                .bg {
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        height: 50px;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                        width: 100%;
+                        left: 0.5px;
+                        top: -40px;
+                        z-index: -1;
+                        background-position: 90px;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+                .title {
+                    img {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}
