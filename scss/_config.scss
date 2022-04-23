@@ -20,8 +20,8 @@ $time-prev: hsl(236, 100%, 87%);
 .bg {
     border-radius: 5%;
     background-color: $section-bg;
-    padding: 10%;
     color: #fff;
+    padding: 10%;
 
     &:hover {
         background-color: $section-bg_hover;

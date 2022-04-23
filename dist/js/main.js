@@ -125,28 +125,30 @@ function displayCards(time = "weekly") {
           ${card.title}
           <img class="ellipsis" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
         </h6>
-        <h1 class="tracker-work_time_now now">
+        <div class="tracker-time">
+          <h1 class="tracker-work_time_now now">
 
-          ${time === 'weekly' ?
-        card.timeframes.weekly.current : ''
-      }${time === 'daily' ?
-        card.timeframes.daily.current : ''
-      }${time === 'monthly' ?
-        card.timeframes.monthly.current : ''
-      }hrs
+            ${time === 'weekly' ?
+          card.timeframes.weekly.current : ''
+        }${time === 'daily' ?
+          card.timeframes.daily.current : ''
+        }${time === 'monthly' ?
+          card.timeframes.monthly.current : ''
+        }hrs
 
-        </h1>
-        <p class="tracker-work_time_previous previous">
+          </h1>
+          <p class="tracker-work_time_previous previous">
 
-          ${time === 'weekly' ?
-        `Last Week - ${card.timeframes.weekly.previous}` : ''
-      }${time === 'daily' ?
-        `Yesterday - ${card.timeframes.daily.previous}` : ''
-      }${time === 'monthly' ?
-        `Last Month - ${card.timeframes.monthly.previous}` : ''
-      }hrs
+            ${time === 'weekly' ?
+          `Last Week - ${card.timeframes.weekly.previous}` : ''
+        }${time === 'daily' ?
+          `Yesterday - ${card.timeframes.daily.previous}` : ''
+        }${time === 'monthly' ?
+          `Last Month - ${card.timeframes.monthly.previous}` : ''
+        }hrs
 
-        </p>
+          </p>
+        </div>
       </section>`
   })
 }

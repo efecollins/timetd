@@ -1,8 +1,8 @@
 .bg {
   border-radius: 5%;
   background-color: #1c1f4a;
-  padding: 10%;
   color: #fff;
+  padding: 10%;
 }
 
 .bg:hover {
@@ -76,6 +76,7 @@ body {
   width: 85%;
   position: relative;
   color: #6f76c8;
+  border-radius: 5%;
 }
 
 #parent .user::after {
@@ -181,86 +182,232 @@ body {
         grid-template-columns: 25% 75%;
   }
   #parent .user {
-    background-color: #5847eb;
-    padding: 10% 10% 25%;
-    width: 85%;
-    position: relative;
-    color: #6f76c8;
-  }
-  #parent .user::after {
-    content: "";
-    position: absolute;
-    height: 160px;
-    width: 100%;
-    background-color: #1c1f4a;
-    left: 0;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    bottom: -100px;
-    z-index: -1;
+    width: 95%;
   }
   #parent .user-img {
-    width: 30%;
-    border-color: white;
-    border-radius: 100%;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 25px;
-  }
-  #parent .user p {
-    color: #bdc1ff;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
   #parent .user-name {
-    color: #fff;
-    font-weight: 300;
-  }
-  #parent .user-time {
-    position: absolute;
-    bottom: -90px;
-    cursor: pointer;
-  }
-  #parent .user-time .weekly {
-    margin: 10px auto;
-  }
-  #parent .user-time .active {
-    color: #fff;
-  }
-  #parent .user-time .daily:hover, #parent .user-time .weekly:hover, #parent .user-time .monthly:hover {
-    color: #fff;
-    -webkit-transition: color 0.2s ease-in;
-    transition: color 0.2s ease-in;
+    font-size: 1.9em;
   }
   #parent .tracker {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 25% 25% 25%;
-        grid-template-columns: 25% 25% 25%;
-    -ms-grid-rows: 60% 75%;
-        grid-template-rows: 60% 75%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-  }
-  #parent .tracker .bg {
-    position: relative;
+    -ms-grid-columns: 30% 30% 30%;
+        grid-template-columns: 30% 30% 30%;
+    -ms-grid-rows: 65% 75%;
+        grid-template-rows: 65% 75%;
   }
   #parent .tracker .bg::before {
-    position: absolute;
-    content: "";
+    background-position: 70px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .bg {
+    padding: 9%;
+  }
+  .title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .now {
+    font-size: 1.7em;
+    margin-bottom: 2px;
+  }
+  .previous {
+    font-size: 10px;
+  }
+  .attribution {
+    margin-top: 110px;
+  }
+  #parent .user {
+    width: 95%;
+    padding: 10%;
+  }
+  #parent .user-name {
+    font-size: 1.9em;
+  }
+  #parent .tracker {
+    -ms-grid-columns: 30% 30% 30%;
+        grid-template-columns: 30% 30% 30%;
+    -ms-grid-rows: 70% 75%;
+        grid-template-rows: 70% 75%;
+  }
+  #parent .tracker .bg::before {
+    background-position: 40px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .bg {
+    padding: 8%;
+  }
+  .title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .now {
+    font-size: 1.5em;
+  }
+  .previous {
+    font-size: 8px;
+  }
+  .attribution {
+    width: 430%;
+    margin-top: 130px;
+  }
+  #parent {
+    padding: 22% 5%;
+  }
+  #parent .user-name {
+    font-size: 1.7em;
+  }
+  #parent .user-time {
+    bottom: -80px;
+    font-size: 13px;
+  }
+  #parent .tracker {
+    -ms-grid-rows: 70% 85%;
+        grid-template-rows: 70% 85%;
+  }
+  #parent .tracker .bg::before {
+    top: -30px;
+    background-size: 50%;
+    background-position: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .title {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  .now {
+    font-size: 1.3em;
+  }
+  #parent {
+    padding: 22% 5%;
+  }
+  #parent .user p {
+    font-size: 12px;
+  }
+  #parent .user-name {
+    font-size: 1.3em;
+  }
+  #parent .user-time {
+    bottom: -70px;
+  }
+  #parent .user::after {
+    bottom: -80px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #parent .tracker .bg::before {
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: -30px;
+    background-position: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bg {
+    border-radius: 15px;
+    padding: 10%;
+  }
+  .title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .now {
+    font-weight: 300;
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+  .previous {
+    font-size: 14px;
+  }
+  .attribution {
+    margin-top: 50px;
+    width: 100%;
+  }
+  #parent {
+    padding: 22% 8%;
+    display: block;
+  }
+  #parent .user {
+    padding: 10%;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 150px;
+  }
+  #parent .user-info {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  #parent .user::after {
+    height: 100px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: -70px;
+  }
+  #parent .user-img {
+    border-width: 3px;
+    margin: 0 15px 0 0;
+    float: left;
+  }
+  #parent .user p {
+    position: inherit;
+    top: 10px;
+    margin-bottom: 3px;
+    font-size: 15px;
+  }
+  #parent .user-name {
+    position: inherit;
+    top: 15px;
+  }
+  #parent .user-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: -45px;
+    font-size: 18px;
+    width: 250px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #parent .user-time .weekly {
+    margin: 0;
+  }
+  #parent .tracker {
+    display: block;
+  }
+  #parent .tracker .bg {
+    margin-bottom: 70px;
+  }
+  #parent .tracker .bg::before {
     height: 50px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    width: 100%;
-    left: 0.5px;
     top: -40px;
-    z-index: -1;
-    background-position: 90px;
-    background-repeat: no-repeat;
+    background-position: 200px;
+    background-size: 30%;
   }
   #parent .tracker .title img {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  #parent .tracker-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #parent .tracker-time p {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;

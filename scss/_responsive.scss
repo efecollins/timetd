@@ -1,8 +1,274 @@
-// @mixin media-mobile {
-//     @media screen and (max-width: 375px) {
+@mixin media-mobile {
+    @media screen and (max-width: 375px) {
+        .bg {
+            border-radius: 15px;
+            padding: 10%;
+        }
 
-//     }
-// }
+        .title {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .now {
+            font-weight: 300;
+            font-size: 2em;
+            margin-bottom: 0;
+        }
+
+        .previous {
+            font-size: 14px;
+        }
+
+        .attribution {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        #parent {
+            padding: 22% 8%;
+            display: block;
+
+            .user {
+                padding: 10%;
+                width: 100%;
+                border-radius: 15px;
+                margin-bottom: 150px;
+
+                &-info {
+                    position: relative;
+                    margin-bottom: 30px;
+                }
+
+                &::after {
+                    height: 100px;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    bottom: -70px;
+                }
+
+                &-img {
+                    border-width: 3px;
+                    margin: 0 15px 0 0;
+                    float: left;
+                }
+
+                p {
+                    position: inherit;
+                    top: 10px;
+                    margin-bottom: 3px;
+                    font-size: 15px;
+                }
+
+                &-name {
+                    position: inherit;
+                    top: 15px;
+                }
+
+                &-time {
+                    display: flex;
+                    bottom: -45px;
+                    font-size: 18px;
+                    width: 250px;
+                    justify-content: space-between;
+
+                    .weekly {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .tracker {
+                display: block;
+
+                .bg {
+                    margin-bottom: 70px;
+
+                    &::before {
+                        height: 50px;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                        top: -40px;
+                        background-position: 200px;
+                        background-size: 30%;
+                    }
+                }
+
+                .title {
+                    img {
+                        justify-self: end;
+                    }
+                }
+
+                &-time {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin media-tab3 {
+    @media screen and (max-width: 575px) {
+
+        .title {
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+
+        .now {
+            font-size: 1.3em;
+        }
+
+        #parent {
+            padding: 22% 5%;
+            .user {
+
+                p {
+                    font-size: 12px;
+                }
+
+                &-name {
+                    font-size: 1.3em;
+                }
+
+                &-time {
+                    bottom: -70px;
+                }
+
+                &::after {
+                    bottom: -80px;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+
+            .tracker {
+
+                .bg {
+                    &::before {
+                        height: 40px;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        top: -30px;
+                        background-position: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@mixin media-tab2 {
+    @media screen and (max-width: 730px) {
+        .bg {
+            padding: 8%;
+        }
+
+        .title {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .now {
+            font-size: 1.5em;
+        }
+
+        .previous {
+            font-size: 8px;
+        }
+
+        .attribution {
+            width: 430%;
+            margin-top: 130px;
+        }
+
+        #parent {
+            padding: 22% 5%;
+
+            .user {
+
+                &-name {
+                    font-size: 1.7em;
+                }
+
+                &-time {
+                    bottom: -80px;
+                    font-size: 13px;
+                }
+            }
+
+            .tracker {
+                grid-template-rows: 70% 85%;
+
+                .bg {
+                    &::before {
+                        top: -30px;
+                        background-size: 50%;
+                        background-position: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@mixin media-tab {
+    @media screen and (max-width: 834px) {
+        .bg {
+            padding: 9%;
+        }
+
+        .title {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .now {
+            font-size: 1.7em;
+            margin-bottom: 2px;
+        }
+
+        .previous {
+            font-size: 10px;
+        }
+
+        .attribution {
+            margin-top: 110px;
+        }
+
+        #parent {
+
+            .user {
+                width: 95%;
+                padding: 10%;
+
+                &-name {
+                    font-size: 1.9em;
+                }
+            }
+
+            .tracker {
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 70% 75%;
+
+                .bg {
+                    &::before {
+                        background-position: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @mixin media-lg {
     @media screen and (max-width: 1024px) {
@@ -17,94 +283,25 @@
             grid-template-columns: 25% 75%;
 
             .user {
-                background-color: $user-info_bg;
-                padding: 10% 10% 25%;
-                width: 85%;
-                position: relative;
-                color: $section-bg_hover;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    height: 160px;
-                    width: 100%;
-                    background-color: #1c1f4a;
-                    left: 0;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    bottom: -100px;
-                    z-index: -1;
-                }
+                width: 95%;
 
                 &-img {
-                    width: 30%;
-                    border-color: white;
-                    border-radius: 100%;
-                    border-style: solid;
-                    border-width: 2px;
-                    margin-bottom: 25px;
-                }
-
-                p {
-                    color: $time-prev;
-                    margin-bottom: 8px;
+                    margin-bottom: 20px;
                 }
 
                 &-name {
-                    color: #fff;
-                    font-weight: 300;
-                }
-
-                &-time {
-                    position: absolute;
-                    bottom: -90px;
-                    cursor: pointer;
-
-                    .weekly {
-                        margin: 10px auto;
-                    }
-
-                    .active {
-                        color: #fff;
-                    }
-
-                    .daily,.weekly,.monthly {
-                        &:hover {
-                            color: #fff;
-                            transition: color 0.2s ease-in;
-                        }
-                    }
+                    font-size: 1.9em;
                 }
             }
 
             .tracker {
-                display: grid;
-                grid-template-columns: 25% 25% 25%;
-                grid-template-rows: 60% 75%;
-                justify-content: space-around;
-                align-items: end;
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 65% 75%;
 
                 .bg {
-                    position: relative;
 
                     &::before {
-                        position: absolute;
-                        content: "";
-                        height: 50px;
-                        border-top-left-radius: 15px;
-                        border-top-right-radius: 15px;
-                        width: 100%;
-                        left: 0.5px;
-                        top: -40px;
-                        z-index: -1;
-                        background-position: 90px;
-                        background-repeat: no-repeat;
-                    }
-                }
-
-                .title {
-                    img {
-                        align-self: center;
+                        background-position: 70px;
                     }
                 }
             }

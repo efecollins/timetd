@@ -24,6 +24,7 @@
         width: 85%;
         position: relative;
         color: $section-bg_hover;
+        border-radius: 5%;
 
         &::after {
             content: "";
@@ -113,4 +114,7 @@
 }
 
 @include media-lg;
-// @include media-mobile;
+@include media-tab;
+@include media-tab2;
+@include media-tab3;
+@include media-mobile;
